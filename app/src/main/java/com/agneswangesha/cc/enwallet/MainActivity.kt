@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.rvExpenses.layoutManager = LinearLayoutManager(this)
-        display
+        displayExpenses()
 
     }
     fun displayExpenses(){
@@ -28,5 +28,10 @@ class MainActivity : AppCompatActivity() {
         val expenses7 = Expenses("", "Salary", "1st July","KES 42000")
         val expenses8 = Expenses("", "Salary", "1st July","KES 42000")
         val expenses9 = Expenses("", "Salary", "1st July","KES 42000")
+
+
+        val expensesList = listOf(expenses1, expenses2, expenses3, expenses4, expenses5, expenses6, expenses7, expenses8,expenses9)
+        val expensesAdapter = ExpensesAdapter(expensesList)
+        binding.rvExpenses.adapter = expensesAdapter
     }
 }
