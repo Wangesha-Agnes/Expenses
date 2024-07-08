@@ -19,6 +19,14 @@ class MainActivity : AppCompatActivity() {
 
     }
     fun displayExpenses(){
-        val expenses1 = Expense()
+        val expenses1 = Expenses("", "Salary", "1st July","KES 42000")
+        val expenses2 = Expenses("", "Salary", "1st July","KES 42000")
+        val expenses3 = Expenses("", "Salary", "1st July","KES 42000")
+        val expenses4 = Expenses("", "Salary", "1st July","KES 42000")
+        val expenses5 = Expenses("", "Salary", "1st July","KES 42000")
+        val expenses6 = Expenses("", "Salary", "1st July","KES 42000")
+        val expenses7 = Expenses("", "Salary", "1st July","KES 42000")
+        val expenses8 = Expenses("", "Salary", "1st July","KES 42000")
+        val expenses9 = Expenses("", "Salary", "1st July","KES 42000")
     }
 }
