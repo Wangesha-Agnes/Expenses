@@ -7,6 +7,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.agneswangesha.cc.enwallet.databinding.ActivityMainBinding
+import com.agneswangesha.cc.enwallet.databinding.ExpenseListItemBinding
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
@@ -14,7 +15,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.rvExpenses.layoutManager = LinearLayoutManager(this)
+        binding.rvExpenses.layoutManager=LinearLayoutManager(this)
+//         binding.rvElayoutManager = LinearLayoutManager(this)
         displayExpenses()
 
     }
@@ -32,6 +34,7 @@ class MainActivity : AppCompatActivity() {
 
         val expensesList = listOf(expenses1, expenses2, expenses3, expenses4, expenses5, expenses6, expenses7, expenses8,expenses9)
         val expensesAdapter = ExpensesAdapter(expensesList)
-        binding.rvExpenses.adapter = expensesAdapter
+        binding.rvExpenses.adapter=expensesAdapter
+
     }
 }

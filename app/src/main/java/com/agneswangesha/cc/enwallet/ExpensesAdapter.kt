@@ -13,21 +13,22 @@ class ExpensesAdapter (var expenseList: List<Expenses>):RecyclerView.Adapter<Exp
         return ExpensesViewHolder((itemView))
 
     }
-
-    override fun getItemCount(): Int {
-        return expenseList.size
-    }
-
     override fun onBindViewHolder(holder: ExpensesViewHolder, position: Int) {
         val expense = expenseList[position]
         holder.tvMoney.text = expense.money
         holder.tvSalary.text = expense.salary
         holder.tvDate.text = expense.date
+
+
+    }
+    override fun getItemCount(): Int {
+        return expenseList.size
     }
 }
 class ExpensesViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
     val tvMoney = itemView.findViewById<TextView>(R.id.tvMoney)
     val tvSalary = itemView.findViewById<TextView>(R.id.tvSalary)
     val tvDate = itemView.findViewById<TextView>(R.id.tvDate)
+
 
 }
